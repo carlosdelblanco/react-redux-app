@@ -1,21 +1,21 @@
 import React, { useEffect } from "react";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchAllUsers } from "../store/slices/users";
 
 const UserList = () => {
+  const { list: users } = useSelector((state) => state.users);
   const dispatch = useDispatch();
-  const users = [];
 
   useEffect(() => {
     dispatch(fetchAllUsers());
   }, [dispatch]);
 
   return (
-    <div className="container">
+    <div className="container mt-4">
       <div className="row">
         {users.map((user, index) => (
-          <div key={index} className="col-md-3">
+          <div key={index} className="col-md-3 mb-4">
             <div className="card">
               <img src={user.avatar} alt="avatar" />
               <div className="card-body">
