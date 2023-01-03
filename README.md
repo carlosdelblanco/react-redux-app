@@ -71,4 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Technologies used for this app
 
-axios , bootstrap, react-redux
+axios , bootstrap, react-redux, reduxjs toolkit
